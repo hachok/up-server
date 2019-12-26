@@ -1,0 +1,39 @@
+{
+  "name": "minimal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node dist/index.js",
+    "start:dev": "npm run build:dev",
+    "build:dev": "nodemon 'src/index.ts' --exec 'ts-node' src/index.ts -e ts,graphql",
+    "build": "tsc -p . && ncp src dist"
+  },
+  "keywords": [],
+  "author": "Devan Beitel",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-boost": "^0.4.7",
+    "apollo-server-express": "^2.9.14",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-shopify-webhooks": "^1.1.0",
+    "graphql": "^14.5.8",
+    "graphql-import": "^0.7.1",
+    "http": "^0.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "ncp": "^2.0.0",
+    "nodemon": "^2.0.2",
+    "prisma-binding": "^2.3.16"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/graphql": "^14.5.0",
+    "@types/graphql-depth-limit": "^1.1.2",
+    "@types/node": "^13.1.0",
+    "graphql-depth-limit": "^1.1.0",
+    "graphql-import-node": "^0.0.4",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  }
+}
